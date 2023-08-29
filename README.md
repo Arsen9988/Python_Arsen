@@ -1,2 +1,2 @@
 # Python_Arsen
-**Python** for AI
+Python for **AI**
