@@ -1,3 +1,2 @@
 # Python_Arsen
-Python for **AI**
-HW
+AI23 kurs Python programmering
