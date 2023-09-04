@@ -1,2 +1,2 @@
-# Python_Arsen
-AI23 kurs Python programmering
+# Python-programming-Arsen
+-AI: programming with Python
