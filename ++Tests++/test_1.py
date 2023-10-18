@@ -45,24 +45,3 @@ import random
 # print(f'{len(my_list_4) = }')
 # print(f'{len(my_list_5) = }')
 # print(f'{len(my_list_6) = }')
-
-
-
-
-# user = 6 #int(input('Auu: '))
-
-# def matrix(user):
-#     for i in range(user):
-#         for j in range(user):
-#             if i == 1 and j == 1 or i == 1 and j == 3 or i == 3 and j == 1 or i == 3 and j == 3:
-#                 print('O', end=' ')
-#             else:
-#                 print('X', end=' ')
-#         print('')
-
-# matrix(user)
-
-
-
-
-
