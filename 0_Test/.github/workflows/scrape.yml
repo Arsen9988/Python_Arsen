@@ -1,0 +1,35 @@
+name: Wikipedia Scraper
+
+on:
+  schedule:
+    - cron: "*/1 * * * *"  # varje minut
+  workflow_dispatch:
+
+jobs:
+  scrape-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Klona repo
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Installera Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Installera beroenden
+      run: pip install requests beautifulsoup4
+
+    - name: Kör scraping
+      run: python wiki_scraper.py
+
+    - name: Commit & push ändringar
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add wikipedia_text.txt
+        git commit -m "Uppdaterade texten $(date +'%Y-%m-%d %H:%M:%S')" || echo "Inget att committa"
+        git push
